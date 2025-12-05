@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>KLL School Canteen Ordering</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="page">
+    <header class="hero">
+      <div class="hero-text">
+        <p class="eyebrow">Fresh & Fast</p>
+        <h1>KLL School Canteen</h1>
+        <p class="lede">Pick your favorites, add to cart, and place an order in seconds.</p>
+      </div>
+      <div class="hero-card">
+        <div class="hero-pill">Open today</div>
+        <div class="hero-cta">Order ready in minutes ✨</div>
+      </div>
+    </header>
+
+    <main class="grid">
+      <section id="menu-section" class="card">
+        <div class="section-head">
+          <div>
+            <p class="eyebrow">Browse</p>
+            <h2>Menu</h2>
+          </div>
+          <div class="hint">Tap “Add” to fill your tray</div>
+        </div>
+        <div id="menu-list" class="menu-grid">Loading menu...</div>
+      </section>
+
+      <section id="order-section" class="card">
+        <div class="section-head">
+          <div>
+            <p class="eyebrow">Checkout</p>
+            <h2>Your Order</h2>
+          </div>
+          <div class="hint">We’ll confirm instantly</div>
+        </div>
+        <form id="order-form" class="form">
+          <label>Name
+            <input type="text" id="cust-name" required placeholder="Student Name" />
+          </label>
+          <label>Email
+            <input type="email" id="cust-email" placeholder="student@school.edu" />
+          </label>
+          <label>Level &amp; Section
+            <input type="text" id="cust-year-section" required placeholder="Grade 10 - Rose" />
+          </label>
+          <div id="cart" class="cart"></div>
+          <button type="submit" class="primary">Place Order</button>
+        </form>
+        <div id="message" class="toast"></div>
+      </section>
+
+      <section id="admin-section" class="card">
+        <div class="section-head">
+          <div>
+            <p class="eyebrow">Admin</p>
+            <h2>Orders</h2>
+          </div>
+          <div class="hint">Update status or delete</div>
+        </div>
+        <div id="orders-list" class="orders">Loading orders...</div>
+      </section>
+    </main>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

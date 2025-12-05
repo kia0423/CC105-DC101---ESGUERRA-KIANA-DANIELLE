@@ -1,0 +1,10 @@
+Entities:
+- menu_items(item_id PK, name, price, category, description, available)
+- customers(customer_id PK, name, email, phone)
+- orders(order_id PK, customer_id FK->customers.customer_id, total_amount, status, created_at)
+- order_items(order_item_id PK, order_id FK->orders.order_id, item_id FK->menu_items.item_id, quantity, price)
+
+Relationships:
+- customers 1 --- * orders
+- orders 1 --- * order_items
+- menu_items 1 --- * order_items
